@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+      .button { background-color: #e9e9e9; border: 1px; color: black;
+      padding: 3px 30px; text-align: center; text-decoration: none;
+      display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer;}
+</style>
+<a href="{{ url_for('upload_file') }}" class="button">Back</a>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>POLICY_ID</th>
+        <th>POLICY_IS_RENEWED</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pred in predict %}
+        <tr>
+          <td>{{ pred['id'] }}</td>
+          <td>{{ pred['ren'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
