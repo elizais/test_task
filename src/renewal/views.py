@@ -18,10 +18,10 @@ def upload_file():
             file.save(file_path)
             predictor = Predictor(app.config['NAME_FINAL_MODEL_DIR'])
             data_pred = predictor(file_path,
-                                  app.config['ID_COL'],
-                                  app.config['NAME_DATA_TYPE_COL'],
-                                  app.config['DEL_COLUMN'],
-                                  app.config['DATA_TYPE'][1])
+                                app.config['ID_COL'],
+                                app.config['NAME_DATA_TYPE_COL'],
+                                app.config['DEL_COLUMN'],
+                                app.config['DATA_TYPE'][1])
             os.remove(file_path)
             return render_template('result_table.html', title='Renewed', predict=data_pred)
     return render_template('upload_file.html', title='Upload File')

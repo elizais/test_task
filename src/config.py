@@ -1,6 +1,10 @@
+import os
 
 class BaseConfig:
-    NAME_FINAL_MODEL_DIR = r'mlmodel\renewal_model.cbm'
+    REN_DIR = 'renewal'
+    FINAL_MODEL_DIR = 'mlmodel'
+    NAME_FINAL_MODEL = 'renewal_model.cbm'
+    NAME_FINAL_MODEL_DIR = os.path.join(REN_DIR, FINAL_MODEL_DIR, NAME_FINAL_MODEL)
 
     NAME_DATA_TYPE_COL = 'DATA_TYPE'
     ID_COL = 'POLICY_ID'
@@ -19,7 +23,7 @@ class BaseConfig:
 
     DATA_TYPE = ['TRAIN', 'TEST ']
 
-    UPLOAD_FOLDER = 'uploaded_files'
+    UPLOAD_FOLDER = ''
 
     ALLOWED_EXTENSIONS = {'txt', 'csv'}
 
