@@ -2,12 +2,14 @@
 
 comad to run Dockerfile
 
-..* build image
-'''
-docker-compose build
-'''
+⋅⋅*build image.
 
-..* run Docker container
-'''
+```
+docker-compose build
+```
+
+⋅⋅*run Docker container
+
+```
 docker-compose up
-'''
+```
