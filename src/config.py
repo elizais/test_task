@@ -1,5 +1,3 @@
-import os
-
 
 class BaseConfig:
     NAME_FINAL_MODEL_DIR = r'mlmodel\renewal_model.cbm'

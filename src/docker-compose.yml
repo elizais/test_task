@@ -1,0 +1,18 @@
+version: '3'
+services:
+  flask:
+    build: .
+
+    container_name: renewal
+
+    environment:
+      - PYTHONUNBUFFERED=True
+
+    restart: on-failure
+    volumes:
+      - ./renewal:/renewal
+
+    ports:
+      - "5000:5000"
+
+    command: gunicorn run:"app" -b 0.0.0.0:5000 --reload
