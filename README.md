@@ -1,6 +1,6 @@
 # test_task
 
-You need to go in directory SRC to build Dockerfile
+You need to go to directory SRC to build Dockerfile
 
 ```
 cd src
